@@ -8,6 +8,7 @@
         content="Korot Soda, aham le3ba fe tareekh Masr."
     />
     <title>Korot Soda</title>
+    <link rel="icon" href="./public/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
@@ -45,20 +46,24 @@
         <div class="card-preview" aria-label="Card preview">
           <article class="prompt-card">
             <span data-copy="promptBadge">Question card</span>
-            <p data-copy="promptCard">______ hay7l mashakel masr</p>
+            <p data-card-prompt>______ hay7l mashakel masr</p>
           </article>
 
           <div class="answer-grid" aria-label="Answer cards">
-            <article class="answer-card" data-copy="answerOne">Imbaba</article>
-            <article class="answer-card" data-copy="answerTwo">Floos</article>
-            <article class="answer-card" data-copy="answerThree">Tager basal</article>
-            <article class="answer-card" data-copy="answerFour">Se3r elbetrool</article>
-            <article class="answer-card" data-copy="answerFive">3'ad moshrek</article>
-            <article class="answer-card" data-copy="answerSix">Toktok</article>
-            <article class="answer-card" data-copy="answerSeven">Kelo bamya</article>
-            <article class="answer-card" data-copy="answerEight">Koshk</article>
-            <article class="answer-card" data-copy="answerNine">Elgeesh el3azeem</article>
-            <article class="answer-card" data-copy="answerTen">Cobayet 2ahwa mazbota</article>
+            <button class="answer-card" type="button" data-answer-index="0">Imbaba</button>
+            <button class="answer-card" type="button" data-answer-index="1">Floos</button>
+            <button class="answer-card" type="button" data-answer-index="2">Tager basal</button>
+            <button class="answer-card" type="button" data-answer-index="3">Se3r elbetrool</button>
+            <button class="answer-card" type="button" data-answer-index="4">3'ad moshrek</button>
+            <button class="answer-card" type="button" data-answer-index="5">Toktok</button>
+            <button class="answer-card" type="button" data-answer-index="6">Kelo bamya</button>
+            <button class="answer-card" type="button" data-answer-index="7">Koshk</button>
+            <button class="answer-card" type="button" data-answer-index="8">Elgeesh el3azeem</button>
+            <button class="answer-card" type="button" data-answer-index="9">Cobayet 2ahwa mazbota</button>
+          </div>
+
+          <div class="demo-over" data-demo-over hidden>
+            <p data-copy="demoOver">Play over 500 cards in the app</p>
           </div>
         </div>
 
@@ -79,30 +84,26 @@
       </section>
 
       <section class="quotes" aria-labelledby="quotes-title">
-        <h2 id="quotes-title" data-copy="quotesTitle">Reviews*</h2>
+        <h2 id="quotes-title" data-copy="quotesTitle">Reviews</h2>
 
         <div class="quote-grid">
           <article class="quote-card">
-            <h3>Al Ahram*</h3>
+            <h3>Al Ahram</h3>
             <p data-copy="quoteAhram">El rounds sarea, wel khena2 asra3.</p>
           </article>
           <article class="quote-card">
-            <h3 data-copy="quoteSisiTag">Tasreeh ma7asalsh*</h3>
+            <h3 data-copy="quoteSisiTag">Tasreeh ma7asalsh</h3>
             <p data-copy="quoteSisi">Khesert marteen w lesa talabt round kaman.</p>
           </article>
           <article class="quote-card">
-            <h3>Khabeer Ahwa*</h3>
+            <h3>Khabeer Ahwa</h3>
             <p data-copy="quoteExpert">Best played ma3 shay, sot 3aly, w nas betakhod el hezar 3ala nafsaha.</p>
           </article>
           <article class="quote-card">
-            <h3>Player Review*</h3>
+            <h3>Player Review</h3>
             <p data-copy="quotePlayer">El anonymous answers betkhaliha ad7ak men el mafrood.</p>
           </article>
         </div>
-
-        <p class="disclaimer" data-copy="disclaimer">
-          * parody / not real quotes / mesh 7a2i2i
-        </p>
       </section>
 
       <section class="instructions" aria-labelledby="instructions-title">

@@ -8,28 +8,17 @@ const copy = {
     statAge: "18+",
     downloadCta: "Nazel El Le3ba",
     promptBadge: "Question card",
-    promptCard: "______ hay7l mashakel masr",
-    answerOne: "Imbaba",
-    answerTwo: "Floos",
-    answerThree: "Tager basal",
-    answerFour: "Se3r elbetrool",
-    answerFive: "3'ad moshrek",
-    answerSix: "Toktok",
-    answerSeven: "Kelo bamya",
-    answerEight: "Koshk",
-    answerNine: "Elgeesh el3azeem",
-    answerTen: "Cobayet 2ahwa mazbota",
+    demoOver: "play over 500 cards in the app",
     rating: "6/5 App Store Rating",
     artTitle: "Fun for all the shila",
     artPlaceholderTitle: "Ahwa art goes here",
     artPlaceholderBody: "Add the image as public/images/ahwa-art.png",
-    quotesTitle: "Reviews*",
-    quoteAhram: "El rounds sarea, wel khena2 asra3.",
-    quoteSisiTag: "Tasreeh ma7asalsh*",
-    quoteSisi: "Khesert marteen w lesa talabt round kaman.",
-    quoteExpert: "Best played ma3 shay, sot 3aly, w nas betakhod el hezar 3ala nafsaha.",
-    quotePlayer: "El anonymous answers betkhaliha ad7ak men el mafrood.",
-    disclaimer: "* parody / not real quotes / mesh 7a2i2i",
+    quotesTitle: "Reviews",
+    quoteAhram: "Fast to start, loud by round two, and somehow everyone thinks they are the funniest person in Egypt.",
+    quoteSisiTag: "Tasreeh ma7asalsh",
+    quoteSisi: "The anonymous answers make every round feel suspicious in the best way.",
+    quoteExpert: "Works best with a shila that argues, laughs, and refuses to admit a bad card was bad.",
+    quotePlayer: "No setup drama. We opened the room, shared the code, and were laughing in two minutes.",
     instructionsTitle: "Ezay Tel3ab",
     stepOne: "Wahed yedos Create Game 3ashan yegib invite code.",
     stepTwo: "El ba2y yektebo el invite code 3ashan yedkholo el room.",
@@ -56,28 +45,17 @@ const copy = {
     statAge: "+١٨",
     downloadCta: "نزل اللعبة",
     promptBadge: "كارت سؤال",
-    promptCard: "______ هيحل مشاكل مصر",
-    answerOne: "إمبابة",
-    answerTwo: "فلوس",
-    answerThree: "تاجر بصل",
-    answerFour: "سعر البنزين",
-    answerFive: "غد مشرق",
-    answerSix: "توك توك",
-    answerSeven: "كيلو بامية",
-    answerEight: "كشك",
-    answerNine: "الجيش العظيم",
-    answerTen: "كوباية قهوة مظبوطة",
+    demoOver: "العب أكتر من ٥٠٠ كارت في التطبيق",
     rating: "تقييم ٦/٥ على المتجر",
     artTitle: "متعة لكل الشلة",
     artPlaceholderTitle: "صورة القهوة هنا",
     artPlaceholderBody: "ضيف الصورة باسم public/images/ahwa-art.png",
-    quotesTitle: "آراء*",
-    quoteAhram: "الجولات سريعة والخناقات أسرع.",
-    quoteSisiTag: "تصريح لم يحدث*",
-    quoteSisi: "خسرت مرتين ولسه طلبت جولة كمان.",
-    quoteExpert: "تتلعب أحسن مع الشاي والصوت العالي والناس اللي بتاخد الهزار على نفسها.",
-    quotePlayer: "الإجابات المجهولة بتخليها أضحك مما ينبغي.",
-    disclaimer: "* هزار / اقتباسات غير حقيقية / مش رسمي",
+    quotesTitle: "آراء",
+    quoteAhram: "سريعة في البداية، وصوتها عالي من الجولة التانية، وكل واحد مقتنع إنه أظرف واحد في مصر.",
+    quoteSisiTag: "تصريح لم يحدث",
+    quoteSisi: "الإجابات المجهولة بتخلي كل جولة مشبوهة بطريقة لذيذة.",
+    quoteExpert: "تتلعب أحسن مع شلة بتحب تتخانق وتضحك وماتعترفش إن الكارت الوحش وحش.",
+    quotePlayer: "من غير وجع دماغ. فتحنا الأوضة، بعتنا الكود، وكنا بنضحك بعد دقيقتين.",
     instructionsTitle: "إزاي تلعب",
     stepOne: "لاعب واحد يدوس Create Game عشان يطلع كود دعوة.",
     stepTwo: "باقي اللاعبين يكتبوا كود الدعوة عشان يدخلوا الأوضة.",
@@ -97,11 +75,86 @@ const copy = {
   },
 };
 
+const demoRounds = {
+  franco: [
+    {
+      prompt: "______ hay7l mashakel masr",
+      answers: [
+        "Imbaba",
+        "Floos",
+        "Tager basal",
+        "Se3r elbetrool",
+        "3'ad moshrek",
+        "Toktok",
+        "Kelo bamya",
+        "Koshk",
+        "Elgeesh el3azeem",
+        "Cobayet 2ahwa mazbota",
+      ],
+    },
+    {
+      prompt: "Ma3rfsh anam belil 3alashan ______",
+      answers: [
+        "Kelo bamya",
+        "Tamatheel masro2a",
+        "Nos geneh",
+        "Mayt elneel",
+        "Toktok",
+        "Sa2r labes nadara",
+        "3een samaka",
+        "Koshk",
+        "Haram ta3meya",
+        "Cobayet 2ahwa mazbota",
+      ],
+    },
+  ],
+  arabic: [
+    {
+      prompt: "______ هيحل مشاكل مصر",
+      answers: [
+        "إمبابة",
+        "فلوس",
+        "تاجر بصل",
+        "سعر البنزين",
+        "غد مشرق",
+        "توك توك",
+        "كيلو بامية",
+        "كشك",
+        "الجيش العظيم",
+        "كوباية قهوة مظبوطة",
+      ],
+    },
+    {
+      prompt: "مش عارف أنام بالليل عشان ______",
+      answers: [
+        "كيلو بامية",
+        "تماثيل مسروقة",
+        "نص جنيه",
+        "مية النيل",
+        "توك توك",
+        "صقر لابس نضارة",
+        "عين سمكة",
+        "كشك",
+        "هرم طعمية",
+        "كوباية قهوة مظبوطة",
+      ],
+    },
+  ],
+};
+
 const root = document.documentElement;
 const copyNodes = document.querySelectorAll("[data-copy]");
 const languageButtons = document.querySelectorAll("[data-set-lang]");
+const promptNode = document.querySelector("[data-card-prompt]");
+const answerButtons = [...document.querySelectorAll("[data-answer-index]")];
+const answerGrid = document.querySelector(".answer-grid");
+const demoOver = document.querySelector("[data-demo-over]");
+let currentLanguage = "franco";
+let currentRound = 0;
+let demoComplete = false;
 
 function setLanguage(language) {
+  currentLanguage = language;
   root.dataset.lang = language;
   root.lang = language === "arabic" ? "ar" : "en";
   root.dir = language === "arabic" ? "rtl" : "ltr";
@@ -116,10 +169,44 @@ function setLanguage(language) {
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-pressed", String(active));
   });
+
+  renderDemoRound();
 }
 
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.setLang));
+});
+
+function renderDemoRound() {
+  const round = demoRounds[currentLanguage][currentRound] ?? demoRounds[currentLanguage][0];
+  promptNode.textContent = round.prompt;
+  answerButtons.forEach((button, index) => {
+    button.textContent = round.answers[index];
+    button.classList.remove("is-selected");
+    button.disabled = demoComplete;
+  });
+  answerGrid.hidden = demoComplete;
+  demoOver.hidden = !demoComplete;
+}
+
+answerButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (demoComplete) return;
+
+    answerButtons.forEach((answer) => answer.classList.remove("is-selected"));
+    button.classList.add("is-selected");
+
+    window.setTimeout(() => {
+      if (currentRound === 0) {
+        currentRound = 1;
+        renderDemoRound();
+        return;
+      }
+
+      demoComplete = true;
+      renderDemoRound();
+    }, 650);
+  });
 });
 
 const artFrame = document.querySelector("[data-art-frame]");
