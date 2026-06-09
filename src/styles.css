@@ -282,6 +282,10 @@ h2 {
   gap: 8px;
 }
 
+.answer-grid[hidden] {
+  display: none;
+}
+
 .answer-card {
   appearance: none;
   display: grid;
@@ -326,7 +330,7 @@ h2 {
 
 .demo-over {
   display: grid;
-  min-height: 244px;
+  min-height: 412px;
   place-items: center;
   padding: 18px;
   border: 3px solid var(--ink);
@@ -344,6 +348,10 @@ h2 {
 
 .demo-over[hidden] {
   display: none;
+}
+
+.card-preview.is-complete .prompt-card {
+  transform: rotate(-1deg);
 }
 
 .rating {
@@ -683,7 +691,7 @@ figcaption {
   }
 
   .stats {
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     max-width: 520px;
     margin-right: 0;
@@ -691,7 +699,7 @@ figcaption {
   }
 
   [data-lang="arabic"] .stats {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .primary-cta {

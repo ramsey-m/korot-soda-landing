@@ -14,11 +14,11 @@ const copy = {
     artPlaceholderTitle: "Ahwa art goes here",
     artPlaceholderBody: "Add the image as public/images/ahwa-art.png",
     quotesTitle: "Reviews",
-    quoteAhram: "Fast to start, loud by round two, and somehow everyone thinks they are the funniest person in Egypt.",
+    quoteAhram: "Betebda2 f saniya, w abl ma tefham eh elly 7asal el tarabeza kolaha betetkhanek.",
     quoteSisiTag: "Tasreeh ma7asalsh",
-    quoteSisi: "The anonymous answers make every round feel suspicious in the best way.",
-    quoteExpert: "Works best with a shila that argues, laughs, and refuses to admit a bad card was bad.",
-    quotePlayer: "No setup drama. We opened the room, shared the code, and were laughing in two minutes.",
+    quoteSisi: "En el answers teb2a anonymous de 7araka gameela. Betkhaly kol round feeha shobha.",
+    quoteExpert: "A7la ma3 shila betetkhanek, beted7ak, w mabte3terefsh en el kart el we7esh we7esh.",
+    quotePlayer: "Mafeesh setup drama. Fata7na room, ba3atna el code, w ba3d de2e2teen kona bened7ak.",
     instructionsTitle: "Ezay Tel3ab",
     stepOne: "Wahed yedos Create Game 3ashan yegib invite code.",
     stepTwo: "El ba2y yektebo el invite code 3ashan yedkholo el room.",
@@ -95,16 +95,16 @@ const demoRounds = {
     {
       prompt: "Ma3rfsh anam belil 3alashan ______",
       answers: [
-        "Kelo bamya",
         "Tamatheel masro2a",
         "Nos geneh",
         "Mayt elneel",
-        "Toktok",
         "Sa2r labes nadara",
         "3een samaka",
-        "Koshk",
         "Haram ta3meya",
-        "Cobayet 2ahwa mazbota",
+        "7aga mal7a",
+        "Nady Pyramids F.C",
+        "Shorb mayt elsarf",
+        "Elbambers etmla",
       ],
     },
   ],
@@ -127,16 +127,16 @@ const demoRounds = {
     {
       prompt: "مش عارف أنام بالليل عشان ______",
       answers: [
-        "كيلو بامية",
         "تماثيل مسروقة",
         "نص جنيه",
         "مية النيل",
-        "توك توك",
         "صقر لابس نضارة",
         "عين سمكة",
-        "كشك",
         "هرم طعمية",
-        "كوباية قهوة مظبوطة",
+        "حاجة مالحة",
+        "نادي بيراميدز",
+        "شرب مية المجاري",
+        "البامبرز اتملا",
       ],
     },
   ],
@@ -147,6 +147,7 @@ const copyNodes = document.querySelectorAll("[data-copy]");
 const languageButtons = document.querySelectorAll("[data-set-lang]");
 const promptNode = document.querySelector("[data-card-prompt]");
 const answerButtons = [...document.querySelectorAll("[data-answer-index]")];
+const cardPreview = document.querySelector(".card-preview");
 const answerGrid = document.querySelector(".answer-grid");
 const demoOver = document.querySelector("[data-demo-over]");
 let currentLanguage = "franco";
@@ -185,6 +186,7 @@ function renderDemoRound() {
     button.classList.remove("is-selected");
     button.disabled = demoComplete;
   });
+  cardPreview.classList.toggle("is-complete", demoComplete);
   answerGrid.hidden = demoComplete;
   demoOver.hidden = !demoComplete;
 }
