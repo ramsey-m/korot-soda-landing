@@ -229,6 +229,7 @@ h2 {
 }
 
 .card-preview {
+  position: relative;
   display: grid;
   gap: 12px;
   margin: 6px auto 0;
@@ -329,8 +330,10 @@ h2 {
 }
 
 .demo-over {
+  position: absolute;
+  inset: 12px;
+  z-index: 3;
   display: grid;
-  min-height: 412px;
   place-items: center;
   padding: 18px;
   border: 3px solid var(--ink);
@@ -352,6 +355,24 @@ h2 {
 
 .card-preview.is-complete .prompt-card {
   transform: rotate(-1deg);
+}
+
+.fake-label {
+  position: relative;
+  top: -0.6em;
+  display: inline-block;
+  margin-right: 4px;
+  font-family: var(--font-body);
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
+[data-lang="arabic"] .fake-label {
+  margin-right: 0;
+  margin-left: 4px;
 }
 
 .rating {

@@ -148,7 +148,6 @@ const languageButtons = document.querySelectorAll("[data-set-lang]");
 const promptNode = document.querySelector("[data-card-prompt]");
 const answerButtons = [...document.querySelectorAll("[data-answer-index]")];
 const cardPreview = document.querySelector(".card-preview");
-const answerGrid = document.querySelector(".answer-grid");
 const demoOver = document.querySelector("[data-demo-over]");
 let currentLanguage = "franco";
 let currentRound = 0;
@@ -187,7 +186,6 @@ function renderDemoRound() {
     button.disabled = demoComplete;
   });
   cardPreview.classList.toggle("is-complete", demoComplete);
-  answerGrid.hidden = demoComplete;
   demoOver.hidden = !demoComplete;
 }
 
